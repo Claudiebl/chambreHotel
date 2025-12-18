@@ -1,5 +1,5 @@
-// import de la classe Chambre
-import { Chambre } from "./Chambre.js";
+// importer la class Chambre dans notre JS
+import { Chambre } from "../classes/Chambre.js";
 
 // tableau contenant toutes les chambres de l’hôtel
 let hotel = [];

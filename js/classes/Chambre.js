@@ -1,4 +1,4 @@
-// création de la classe Chambre
+// création de la classe Chambre à exporter
 export class Chambre {
 
     /**
