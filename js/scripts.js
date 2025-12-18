@@ -26,11 +26,15 @@ function genererChambre() {
     }
   }
 
-//pour chaque chambre du tableau, si il est dans l'index, je le reserve.
+// parcours la liste des index sélectionnés
   chambreReserver.forEach((index) => {
+    // et *réserve* chaque chambre correspondante dans l'hôtel
     hotel[index].reserverChambre();
   });
 }
+
+// appel la fonction de mettre l'etat de la reservation aleatoire
+genererChambre();
 
 // pour chaque index contenu dans le tableau chambreReserver,
 // on réserve la chambre correspondante dans le tableau hotel
@@ -38,7 +42,7 @@ function compterChambresLibres(tableauChambres) {
     return tableauChambres.filter(chambre => !chambre.reserver).length;
 }
 
-//afficher le tableau hotel avec la class Chambre 
+//afficher le tableau hotel (incluant la class Chambre) 
 console.log(hotel);
 
 // j'affiche dans ma console le nombre de chambre libre dans mon hotel
