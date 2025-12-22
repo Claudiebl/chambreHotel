@@ -5,40 +5,57 @@ export class Employe {
     #branche;
     #salaire;
     
-    constructor(nomInit, prenomInit, brancheInit, salaireInit = 1500) {
-        this.#nom = nomInit;
-        this.#prenom = prenomInit;
-        this.#branche = brancheInit;
-        this.#salaire = salaireInit;
+    constructor(nom, prenom, branche, salaire = 1500) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.branche = branche;
+        this.salaire = salaire;
     }
 
     get nom() {
-        return this.#nom
+        return this.#nom;
     }
 
-    set nom(valeur) {
-        if (valeur > 0) {
-            this.#nom = valeur;
+    set nom(nouveauNom) {
+        if (typeof nouveauNom === "string") {
+            this.#nom = nouveauNom;
         }
     }
 
     get prenom() {
-        return this.#prenom
+        return this.#prenom;
+    }
+
+    set prenom(nouveauPrenom) {
+        if (typeof nouveauPrenom === "string") {
+            this.#prenom = nouveauPrenom;
+        }
     }
 
     get branche() {
-        return this.#branche
+        return this.#branche;
+    }
+
+    set branche(nouvelleBranche) {
+        if (typeof nouvelleBranche === "string") {
+            this.#branche = nouvelleBranche;
+        }
     }
 
     get salaire() {
-        return this.#salaire
+        return this.#salaire;
     }
 
-    augmentationSalaire(montant) {
-        this.#salaire += montant
+    set salaire(nouveauSalaire) {
+        if (typeof nouveauSalaire === "number" && nouveauSalaire > this.salaire);
+        this.#salaire += nouveauSalaire;
+    }
+
+    salaireAnnuel() {
+        this.salaireAnnuel = this.#salaire * 12;
     }
 
     affichageSalaire() {
-        console.log(this.#salaire)
+        console.log(this.#salaire);
     }
 }
